@@ -1,0 +1,41 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: HomeAssistant-Discord-Bot
+version: "1.7.0"
+slug: homeassistant-discord-bot
+description: The Home Assistant Discord Bot offers a pile of features designed to enhance your Discord experience by leveraging Home Assistant's capabilities via MQTT for lightweight communication and automatic setup of devices and entities.
+url: "https://github.com/kariudo/homeassistant-discord-bot"
+arch:
+  - aarch64
+  - amd64
+init: false
+options:
+  BOT_TOKEN: ""
+  MQTT_URL: mqtt://192.168.1.110
+  MQTT_PORT: 1883
+  MQTT_USERNAME: homeassistant
+  MQTT_PASSWORD: ""
+  TOPIC_DISCOVERY: homeassistant
+  TOPIC_BOT: discordbot
+  GUILD_ID: ""
+  YOUR_ID: ""
+  BOT_ID: ""
+  MQTT_CLIENT_ID: discordbot_1
+  BOT_ACTIVITY: "🏠Watching the house"
+  BOT_NICKNAME: Caduceus
+schema:
+  BOT_TOKEN: str
+  MQTT_URL: url
+  MQTT_PORT: int
+  MQTT_USERNAME: str
+  MQTT_PASSWORD: str
+  TOPIC_DISCOVERY: str
+  TOPIC_BOT: str
+  GUILD_ID: str
+  YOUR_ID: str
+  BOT_ID: str
+  MQTT_CLIENT_ID: str
+  BOT_ACTIVITY: str?
+  BOT_NICKNAME: str
+map:
+  - share:rw
+image: "ghcr.io/kariudo/homeassistant-discord-bot
